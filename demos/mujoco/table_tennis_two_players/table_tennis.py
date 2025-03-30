@@ -126,8 +126,8 @@ if __name__ == '__main__':
     data = mujoco.MjData(model)
     last_time = time.time()
     publisher = MujocoPublisher(model, data, args.host)
-    player1 = MetaQuest3("IRLMQ3-2")
-    # player1 = MetaQuest3("UnityNode")
+    #player1 = MetaQuest3("IRLMQ3-2")
+    player1 = MetaQuest3("UnityNode")
     # # player2 = MetaQuest3("ALR2")
     # while not player1.connected:
     #     time.sleep(0.01)

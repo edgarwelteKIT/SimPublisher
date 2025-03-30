@@ -37,7 +37,7 @@ class MetaQuest3Controller(CartPosQuatImpedenceController):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", type=str, default="127.0.0.1")
+    parser.add_argument("--host", type=str, default="192.168.178.38")
     args = parser.parse_args()
 
     box1 = Box(
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     publisher = SFPublisher(
         scene, args.host, no_tracked_objects=["table_plane", "table0"]
     )
-    meta_quest3 = MetaQuest3("IRLMQ3-1")
+    meta_quest3 = MetaQuest3("UnityNode")
     robot_controller = MetaQuest3Controller(meta_quest3)
     robot_controller.executeController(robot, maxDuration=1000, block=False)
 
